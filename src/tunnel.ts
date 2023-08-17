@@ -25,14 +25,6 @@ export async function startTunnel(
     cloudflaredNotice,
   } = await import("./cloudflared");
 
-  const url =
-    opts.url ||
-    `${opts.protocol || "http"}://${opts.hostname ?? "localhost"}:${
-      opts.port ?? 3000
-    }`;
-
-  consola.start(`Starting cloudflared tunnel to ${url}`);
-
   if (!existsSync(cloudflaredBinPath)) {
     consola.log(cloudflaredNotice);
     const canInstall = await consola.prompt(
@@ -47,11 +39,11 @@ export async function startTunnel(
     }
 
     const s = spinner();
-    s.start('Installing cloudflared');
+    s.start("Installing cloudflared");
 
     await installCloudflared();
 
-    s.stop('Installed cloudflared successfully');
+    s.stop("Installed cloudflared successfully");
   }
 
   const args = [
