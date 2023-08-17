@@ -1,6 +1,6 @@
 {
   "name": "ctun",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Tunnel your local HTTP(s) server to the world! Powered by Cloudflare Quick Tunnels.",
   "license": "MIT",
   "sideEffects": false,
@@ -29,18 +29,17 @@
   ],
   "scripts": {
     "build": "unbuild",
-    "start": "unbuild --stub && node bin/ctun.mjs url http://localhost:3000",
+    "start": "unbuild --stub && node bin/ctun.mjs --url http://localhost:3000",
     "dev": "vitest dev",
     "lint": "eslint --cache --ext .ts,.js,.mjs,.cjs . && prettier -c src test",
     "lint:fix": "eslint --cache --ext .ts,.js,.mjs,.cjs . --fix && prettier -c src test -w",
     "prepack": "npm run build",
     "release": "npm test && changelogen --release && npm publish && git push --follow-tags",
     "typecheck": "tsc --noEmit",
-    "test": "npm lint && npm typecheck &&  vitest run --coverage",
-    "ctun": "jiti ./scripts/ctun.mjs"
+    "test": "npm lint && npm typecheck &&  vitest run --coverage"
   },
   "dependencies": {
-    "citty": "^0.1.2",
+    "cac": "^6.7.14",
     "consola": "^3.2.3",
     "hqr": "^0.0.1",
     "pathe": "^1.1.1"
@@ -51,7 +50,6 @@
     "changelogen": "^0.5.4",
     "eslint": "^8.47.0",
     "eslint-config-unjs": "^0.2.1",
-    "jiti": "^1.19.1",
     "prettier": "^3.0.1",
     "typescript": "^5.1.6",
     "unbuild": "^2.0.0-rc.0",

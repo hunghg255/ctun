@@ -14,7 +14,7 @@ Tunnel your local HTTP(s) server to the world!
 Globally run tunnel with `npx`:
 
 ```sh
-npx ctun@latest tunnel http://localhost:3000
+npx ctun@latest --url http://localhost:3000
 ```
 
 ```
@@ -42,7 +42,7 @@ npx ctun@latest tunnel http://localhost:3000
 ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
 ```
 
-Use `npx ctun tunnel --help` for more usage info.
+Use `npx ctun --help` for more usage info.
 
 ## Usage (API)
 
@@ -106,14 +106,6 @@ The local server protocol (only effective if `url` is not provided).
 - Default: `false`
 
 Verify local server TLS certificate.
-
-## Development
-
-- Clone this repository
-- Install latest LTS version of [Node.js](https://nodejs.org/en/)
-- Enable [Corepack](https://github.com/nodejs/corepack) using `corepack enable`
-- Install dependencies using `pnpm install`
-- Run interactive tests using `pnpm dev`
 
 ## License
 
