@@ -1,5 +1,6 @@
 import { existsSync } from "node:fs";
 import consola from "consola";
+import { spinner } from "@clack/prompts";
 
 export interface TunnelOptions {
   url?: string;
@@ -44,7 +45,13 @@ export async function startTunnel(
       consola.fail("Skipping tunnel setup.");
       return;
     }
+
+    const s = spinner();
+    s.start('Installing cloudflared');
+
     await installCloudflared();
+
+    s.stop('Installed cloudflared successfully');
   }
 
   const args = [
