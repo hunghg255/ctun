@@ -1,6 +1,6 @@
 import { existsSync } from "node:fs";
 import consola from "consola";
-import { spinner } from "@clack/prompts";
+import { spinner } from "unprompts";
 
 export interface TunnelOptions {
   url?: string;

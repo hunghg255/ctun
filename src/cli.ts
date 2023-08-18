@@ -1,12 +1,11 @@
 /* eslint-disable unicorn/no-array-reduce */
-import cac from "cac";
 import consola from "consola";
 import { renderUnicodeCompact } from "hqr";
-import { cyan, green, underline, red } from "kolorist";
+import { cyan, green, underline, red, white } from "kolorist";
 import ip from "ip";
+import { cac, note } from "unprompts";
 import { version } from "../package.json";
 import { startTunnel } from "./tunnel";
-import { note } from "./utils";
 
 const cli = cac("ctun");
 
@@ -53,10 +52,15 @@ cli.command("").action(async (args) => {
     border: 1,
   });
 
+  const qrTunnelWhite = qrTunnel
+    .split("\n")
+    .map((it) => white(it))
+    .join("\n");
+
   note(
     `${cyan(`Tunnel URL: ${underline(tunnelUrl)}`)}\n\n${cyan(
       `IP Static URL: ${underline(urlIp)}`,
-    )}\n\n${cyan("QR Tunnel:\n")}\n${qrTunnel}\n\n${red(
+    )}\n\n${cyan("QR Tunnel:\n")}\n${qrTunnelWhite}\n\n${red(
       "Press Ctrl+C to exit.",
     )}`,
     green(`Starting cloudflared tunnel to ${underline(url)}`),
