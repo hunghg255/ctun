@@ -1,6 +1,6 @@
 {
   "name": "ctun",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "Tunnel your local HTTP(s) server to the world! Powered by Cloudflare Quick Tunnels.",
   "license": "MIT",
   "sideEffects": false,
@@ -57,5 +57,17 @@
     "typescript": "^5.1.6",
     "unbuild": "^2.0.0-rc.0",
     "vitest": "^0.34.1"
+  },
+  "keywords": [
+    "Tunnel",
+    "Cloudflare"
+  ],
+  "bugs": {
+    "url": "https://github.com/hunghg255/ctun/issues"
+  },
+  "homepage": "https://github.com/hunghg255/ctun#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hunghg255/ctun.git"
   }
 }
