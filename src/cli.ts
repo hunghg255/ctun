@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/prefer-logical-operator-over-ternary */
 /* eslint-disable unicorn/no-array-reduce */
 import consola from "consola";
 import { renderUnicodeCompact } from "hqr";
@@ -6,6 +7,7 @@ import ip from "ip";
 import { cac, note } from "unprompts";
 import { version } from "../package.json";
 import { startTunnel } from "./tunnel";
+import { getPort } from "./utils";
 
 const cli = cac("ctun");
 
@@ -40,10 +42,10 @@ cli.command("").action(async (args) => {
   const url =
     args.url ||
     `${args.protocol || "http"}://${args.hostname ?? "localhost"}:${
-      args.port ?? 3000
+      args.port ? args.port : getPort(args.url)
     }`;
 
-  const urlIp = `http://${ip.address()}:${args.port ?? 3000}`;
+  const urlIp = `http://${ip.address()}:${args.port ? args.port : getPort(args.url)}`;
 
   const tunnelUrl = await tunnel.getURL();
 
