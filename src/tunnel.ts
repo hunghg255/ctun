@@ -67,3 +67,38 @@ export async function startTunnel(
     },
   };
 }
+
+export async function startTunnelAuto(
+  opts: TunnelOptions,
+): Promise<undefined | Tunnel> {
+  const {
+    installCloudflared,
+    startCloudflaredTunnel,
+    cloudflaredBinPath,
+  } = await import("./cloudflared");
+
+  if (!existsSync(cloudflaredBinPath)) {
+    await installCloudflared();
+  }
+
+  const args = [
+    ["--url", opts.url],
+    opts.verifyTLS ? undefined : ["--no-tls-verify", ""],
+  ].filter(Boolean) as [string, string][];
+
+  const tunnel = await startCloudflaredTunnel(Object.fromEntries(args));
+
+  const cleanup = async () => {
+    await tunnel.stop();
+  };
+  for (const signal of ["SIGINT", "SIGUSR1", "SIGUSR2"] as const) {
+    process.once(signal, cleanup);
+  }
+
+  return {
+    getURL: async () => await tunnel.url,
+    close: async () => {
+      await cleanup();
+    },
+  };
+}
