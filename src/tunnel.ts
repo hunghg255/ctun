@@ -78,7 +78,12 @@ export async function startTunnelAuto(
   } = await import("./cloudflared");
 
   if (!existsSync(cloudflaredBinPath)) {
+    const s = spinner();
+    s.start("Installing cloudflared");
+
     await installCloudflared();
+
+    s.stop("Installed cloudflared successfully");
   }
 
   const args = [

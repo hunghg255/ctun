@@ -1,6 +1,6 @@
 {
   "name": "ctun",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Tunnel your local HTTP(s) server to the world! Powered by Cloudflare Quick Tunnels.",
   "license": "MIT",
   "sideEffects": false,
