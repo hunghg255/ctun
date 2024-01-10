@@ -1,13 +1,19 @@
-# 🚇 ctun
+<p align="center">
+<a href="https://www.npmjs.com/package/ctun" target="_blank" rel="noopener noreferrer">
+<img src="https://api.iconify.design/devicon:cloudflare-wordmark.svg?color=%23b3ff75" alt="logo" width='100'/></a>
+</p>
 
-[![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![bundle][bundle-src]][bundle-href]
+<p align="center">
+  A script create a tunnel to your localhost use Cloudflare Argo Tunnel
+</p>
 
-[![License][license-src]][license-href]
-
-Tunnel your local HTTP(s) server to the world!
-
+<p align="center">
+  <a href="https://www.npmjs.com/package/ctun" target="_blank" rel="noopener noreferrer"><img src="https://badge.fury.io/js/ctun.svg" alt="NPM Version" /></a>
+  <a href="https://www.npmjs.com/package/ctun" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/npm/dt/ctun.svg?logo=npm" alt="NPM Downloads" /></a>
+  <a href="https://bundlephobia.com/result?p=ctun" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/bundlephobia/minzip/ctun" alt="Minizip" /></a>
+  <a href="https://github.com/hunghg255/ctun/graphs/contributors" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/all_contributors-1-orange.svg" alt="Contributors" /></a>
+  <a href="https://github.com/hunghg255/ctun/blob/main/LICENSE" target="_blank" rel="noopener noreferrer"><img src="https://badgen.net/github/license/hunghg255/ctun" alt="License" /></a>
+</p>
 
 ## Usage (CLI)
 
@@ -118,16 +124,3 @@ Verify local server TLS certificate.
 Cloudflared integration based on a fork of [JacobLinCool/node-cloudflared](https://github.com/JacobLinCool/node-cloudflared)
 
 Your installation of cloudflared software constitutes a symbol of your signature indicating that you accept the terms of the Cloudflare [License](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/downloads/license/), [Terms](https://www.cloudflare.com/terms/) and [Privacy Policy](https://www.cloudflare.com/privacypolicy/).
-
-<!-- Badges -->
-
-[npm-version-src]: https://img.shields.io/npm/v/ctun?style=flat&colorA=18181B&colorB=F0DB4F
-[npm-version-href]: https://npmjs.com/package/ctun
-[npm-downloads-src]: https://img.shields.io/npm/dm/ctun?style=flat&colorA=18181B&colorB=F0DB4F
-[npm-downloads-href]: https://npmjs.com/package/ctun
-[codecov-src]: https://img.shields.io/codecov/c/gh/unjs/ctun/main?style=flat&colorA=18181B&colorB=F0DB4F
-[codecov-href]: https://codecov.io/gh/unjs/ctun
-[bundle-src]: https://img.shields.io/bundlephobia/minzip/ctun?style=flat&colorA=18181B&colorB=F0DB4F
-[bundle-href]: https://bundlephobia.com/result?p=ctun
-[license-src]: https://img.shields.io/github/license/unjs/ctun.svg?style=flat&colorA=18181B&colorB=F0DB4F
-[license-href]: https://github.com/unjs/ctun/blob/main/LICENSE
