@@ -1,13 +1,19 @@
-# 🚇 ctun
+<p align="center">
+<a href="https://www.npmjs.com/package/create-template-fe" target="_blank" rel="noopener noreferrer">
+<img src="https://api.iconify.design/tabler:world-up.svg?color=%2349c1fd" alt="logo" width='100'/></a>
+</p>
 
-[![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![bundle][bundle-src]][bundle-href]
+<p align="center">
+  A script to create tunnel your local HTTP(s) server to the world!
+</p>
 
-[![License][license-src]][license-href]
-
-Tunnel your local HTTP(s) server to the world!
-
+<p align="center">
+  <a href="https://www.npmjs.com/package/create-template-fe" target="_blank" rel="noopener noreferrer"><img src="https://badge.fury.io/js/create-template-fe.svg" alt="NPM Version" /></a>
+  <a href="https://www.npmjs.com/package/create-template-fe" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/npm/dt/create-template-fe.svg?logo=npm" alt="NPM Downloads" /></a>
+  <a href="https://bundlephobia.com/result?p=create-template-fe" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/bundlephobia/minzip/create-template-fe" alt="Minizip" /></a>
+  <a href="https://github.com/hunghg255/create-template-fe/graphs/contributors" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/all_contributors-1-orange.svg" alt="Contributors" /></a>
+  <a href="https://github.com/hunghg255/create-template-fe/blob/main/LICENSE" target="_blank" rel="noopener noreferrer"><img src="https://badgen.net/github/license/hunghg255/create-template-fe" alt="License" /></a>
+</p>
 
 ## Usage (CLI)
 
@@ -17,32 +23,11 @@ Globally run tunnel with `npx`:
 npx ctun@latest --url http://localhost:3000
 ```
 
-```
-◐ Starting cloudflared tunnel to http://localhost:3000
-ℹ Waiting for tunnel URL...
-✔ Tunnel ready at https://unjs-is-awesome.trycloudflare.com
-✔ QR Code:
-█▀▀▀▀▀▀▀██▀█████▀▀▀█▀▀█▀▀██▀▀▀▀▀▀▀█
-█ █▀▀▀█ █▄ ▀ ▄█▀█▀█▄▀█ ▀▀██ █▀▀▀█ █
-█ █   █ █▄▄▀▄▀▀▀▀█▄▀▀ ██▀▄█ █   █ █
-█ ▀▀▀▀▀ █ █ █▀▄ ▄ ▄ █▀▄ █▀█ ▀▀▀▀▀ █
-█▀▀▀▀▀█▀▀▀▀▀█ ▄▀▄▄▀██ ▄  ▀▀█▀█▀█▀██
-█▀▄██ █▀█▄ █▀▀██▀ ▄▄▄▄▀▀▄▀▀ ██▀▄ ▄█
-█ ▀██ ▀▀ █ ▄ ██▄█▄▀▄ ▄▄▀▀▀▀▄▀▀▀▄███
-██▀▀▀▀▄▀▀▄█ █▄  ▀  ▄▄▀█▀▄█ ▄█▀██ ▄█
-█▀▄▀▄█▀▀ ▄ ▀█ ▄▀▀█▀█▀▀▄  ▀██▄▀█▄▀██
-█▀█▀█▄▄▀ ▄▄█▀▀██▀▄██▄ █▀▄█▀ ██ █ ▄█
-███▀▀█▄▀▄▄██ ██▄█▄▀███▄ ▀  █▀▀█▄▀██
-█ ▄█▀  ▀ ████▄  ▀▀█▄▄▄▄▄▄█▄▄▀▀ █ ▄█
-█ █▀▄▄█▀▄▀▄▀█ ▄▀ ▄▀▄▀▄▄ ▄ ▀▀ ▀ ▄█▀█
-█▀▀▀▀▀▀▀█ █▀▀▀██▀▄▀▄▄  ▀  █▀█ █▄▀▄█
-█ █▀▀▀█ █▀▀▄ ██▄▀▀▀▄█▄▄▄▄ ▀▀▀ ▄▄█ █
-█ █   █ █ ▀▀█▄  ▀ ▄▄▄▄▀▀▄▄▄▀█▄  ▄▄█
-█ ▀▀▀▀▀ █ ███ ▄▀ █▀▄▄▀▄  ▀█▄ █ ▄▀██
-▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-```
-
 Use `npx ctun --help` for more usage info.
+
+## Result
+
+![ads](https://private-user-images.githubusercontent.com/42096908/335439503-352de869-90c8-43e7-8f12-2537c0c0b1b7.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTcxMjc3NjUsIm5iZiI6MTcxNzEyNzQ2NSwicGF0aCI6Ii80MjA5NjkwOC8zMzU0Mzk1MDMtMzUyZGU4NjktOTBjOC00M2U3LThmMTItMjUzN2MwYzBiMWI3LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA1MzElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNTMxVDAzNTEwNVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWU2MGIzZDBmZTc1MzI0ZDUyZDBjYTI4NmM5NGZjODhkNGJjYTQyODE3ZDBjZTNiZDQ2YTlhZDRiNjgwNTBkOGImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.JzmRpeyw_EV5MfPGiNHozCAqW1hWsYBbAHESfyxJmUs)
 
 ## Usage (API)
 
@@ -118,16 +103,3 @@ Verify local server TLS certificate.
 Cloudflared integration based on a fork of [JacobLinCool/node-cloudflared](https://github.com/JacobLinCool/node-cloudflared)
 
 Your installation of cloudflared software constitutes a symbol of your signature indicating that you accept the terms of the Cloudflare [License](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/downloads/license/), [Terms](https://www.cloudflare.com/terms/) and [Privacy Policy](https://www.cloudflare.com/privacypolicy/).
-
-<!-- Badges -->
-
-[npm-version-src]: https://img.shields.io/npm/v/ctun?style=flat&colorA=18181B&colorB=F0DB4F
-[npm-version-href]: https://npmjs.com/package/ctun
-[npm-downloads-src]: https://img.shields.io/npm/dm/ctun?style=flat&colorA=18181B&colorB=F0DB4F
-[npm-downloads-href]: https://npmjs.com/package/ctun
-[codecov-src]: https://img.shields.io/codecov/c/gh/unjs/ctun/main?style=flat&colorA=18181B&colorB=F0DB4F
-[codecov-href]: https://codecov.io/gh/unjs/ctun
-[bundle-src]: https://img.shields.io/bundlephobia/minzip/ctun?style=flat&colorA=18181B&colorB=F0DB4F
-[bundle-href]: https://bundlephobia.com/result?p=ctun
-[license-src]: https://img.shields.io/github/license/unjs/ctun.svg?style=flat&colorA=18181B&colorB=F0DB4F
-[license-href]: https://github.com/unjs/ctun/blob/main/LICENSE
