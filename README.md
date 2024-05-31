@@ -1,18 +1,18 @@
 <p align="center">
-<a href="https://www.npmjs.com/package/create-template-fe" target="_blank" rel="noopener noreferrer">
-<img src="https://api.iconify.design/tabler:world-up.svg?color=%2349c1fd" alt="logo" width='100'/></a>
+<a href="https://www.npmjs.com/package/ctun" target="_blank" rel="noopener noreferrer">
+<img src="https://api.iconify.design/devicon:cloudflare-wordmark.svg?color=%23b3ff75" alt="logo" width='100'/></a>
 </p>
 
 <p align="center">
-  A script to create tunnel your local HTTP(s) server to the world!
+  A script create a tunnel to your localhost use Cloudflare Argo Tunnel
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/create-template-fe" target="_blank" rel="noopener noreferrer"><img src="https://badge.fury.io/js/create-template-fe.svg" alt="NPM Version" /></a>
-  <a href="https://www.npmjs.com/package/create-template-fe" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/npm/dt/create-template-fe.svg?logo=npm" alt="NPM Downloads" /></a>
-  <a href="https://bundlephobia.com/result?p=create-template-fe" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/bundlephobia/minzip/create-template-fe" alt="Minizip" /></a>
-  <a href="https://github.com/hunghg255/create-template-fe/graphs/contributors" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/all_contributors-1-orange.svg" alt="Contributors" /></a>
-  <a href="https://github.com/hunghg255/create-template-fe/blob/main/LICENSE" target="_blank" rel="noopener noreferrer"><img src="https://badgen.net/github/license/hunghg255/create-template-fe" alt="License" /></a>
+  <a href="https://www.npmjs.com/package/ctun" target="_blank" rel="noopener noreferrer"><img src="https://badge.fury.io/js/ctun.svg" alt="NPM Version" /></a>
+  <a href="https://www.npmjs.com/package/ctun" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/npm/dt/ctun.svg?logo=npm" alt="NPM Downloads" /></a>
+  <a href="https://bundlephobia.com/result?p=ctun" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/bundlephobia/minzip/ctun" alt="Minizip" /></a>
+  <a href="https://github.com/hunghg255/ctun/graphs/contributors" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/all_contributors-1-orange.svg" alt="Contributors" /></a>
+  <a href="https://github.com/hunghg255/ctun/blob/main/LICENSE" target="_blank" rel="noopener noreferrer"><img src="https://badgen.net/github/license/hunghg255/ctun" alt="License" /></a>
 </p>
 
 ## Usage (CLI)
