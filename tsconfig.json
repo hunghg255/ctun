@@ -1,11 +1,17 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "esModuleInterop": true,
+    "target": "esnext",
+    "lib": ["esnext"],
+    "rootDir": ".",
+    "module": "esnext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "allowJs": true,
     "strict": true,
-    "resolveJsonModule": true
-  },
-  "include": ["src"]
+    "strictNullChecks": true,
+    "preserveValueImports": false,
+    "esModuleInterop": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true
+  }
 }

@@ -48,22 +48,13 @@ Import:
 
 ```ts
 // ESM
-import { startTunnel, startTunnelAuto } from "ctun";
-
-// CommonJS
-const { startTunnel, startTunnelAuto } = require("ctun");
+import { startTunnel } from "ctun";
 ```
 
 Start tunnel:
 
 ```ts
 const tunnel = await startTunnel({ port: 3000 });
-```
-
-Start tunnel auto install cloudflared:
-
-```ts
-const tunnel = await startTunnelAuto({ port: 3000 });
 ```
 
 ## Options

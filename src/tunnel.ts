@@ -8,6 +8,7 @@ export interface TunnelOptions {
   hostname?: string;
   protocol?: "http" | "https";
   verifyTLS?: boolean;
+  acceptCloudflareNotice?: boolean;
 }
 
 export interface Tunnel {
@@ -25,14 +26,23 @@ export async function startTunnel(
     cloudflaredNotice,
   } = await import("./cloudflared");
 
+  const url =
+    opts.url ||
+    `${opts.protocol || "http"}://${opts.hostname ?? "localhost"}:${
+      opts.port ?? 3000
+    }`;
+
   if (!existsSync(cloudflaredBinPath)) {
     consola.log(cloudflaredNotice);
-    const canInstall = await consola.prompt(
-      `Do you agree with the above terms and wish to install the binary from GitHub?`,
-      {
-        type: "confirm",
-      },
-    );
+    const canInstall =
+      opts.acceptCloudflareNotice ||
+      process.env.UNTUN_ACCEPT_CLOUDFLARE_NOTICE ||
+      (await consola.prompt(
+        `Do you agree with the above terms and wish to install the binary from GitHub?`,
+        {
+          type: "confirm",
+        },
+      ));
     if (!canInstall) {
       consola.fail("Skipping tunnel setup.");
       return;
@@ -47,47 +57,7 @@ export async function startTunnel(
   }
 
   const args = [
-    ["--url", opts.url],
-    opts.verifyTLS ? undefined : ["--no-tls-verify", ""],
-  ].filter(Boolean) as [string, string][];
-
-  const tunnel = await startCloudflaredTunnel(Object.fromEntries(args));
-
-  const cleanup = async () => {
-    await tunnel.stop();
-  };
-  for (const signal of ["SIGINT", "SIGUSR1", "SIGUSR2"] as const) {
-    process.once(signal, cleanup);
-  }
-
-  return {
-    getURL: async () => await tunnel.url,
-    close: async () => {
-      await cleanup();
-    },
-  };
-}
-
-export async function startTunnelAuto(
-  opts: TunnelOptions,
-): Promise<undefined | Tunnel> {
-  const {
-    installCloudflared,
-    startCloudflaredTunnel,
-    cloudflaredBinPath,
-  } = await import("./cloudflared");
-
-  if (!existsSync(cloudflaredBinPath)) {
-    const s = spinner();
-    s.start("Installing cloudflared");
-
-    await installCloudflared();
-
-    s.stop("Installed cloudflared successfully");
-  }
-
-  const args = [
-    ["--url", opts.url],
+    ["--url", url],
     opts.verifyTLS ? undefined : ["--no-tls-verify", ""],
   ].filter(Boolean) as [string, string][];
 

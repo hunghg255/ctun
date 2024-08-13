@@ -1,10 +1,10 @@
 /* eslint-disable unicorn/prefer-logical-operator-over-ternary */
 /* eslint-disable unicorn/no-array-reduce */
 import consola from "consola";
-import { renderUnicodeCompact } from "hqr";
 import { cyan, green, underline, red, white } from "kolorist";
 import ip from "ip";
 import { cac, note } from "unprompts";
+import { renderUnicodeCompact } from "hqr";
 import { version } from "../package.json";
 import { startTunnel } from "./tunnel";
 import { getPort } from "./utils";
